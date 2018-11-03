@@ -43,7 +43,7 @@ if ( $categories ) { ?>
             endwhile;
         endif;
 
-        wp_reset_query();
+        wp_reset_postdata();
 
         ?>
 

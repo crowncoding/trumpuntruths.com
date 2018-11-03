@@ -44,7 +44,9 @@ function hitmag_body_classes( $classes ) {
 		}
 	}
 
-	if ( is_page() ) {
+	if( is_page_template( 'template-magazine.php' ) ) {
+		$classes[] = 'th-right-sidebar';
+	} elseif ( is_page() ) {
 		$page_specific_layout = get_post_meta( $post->ID, '_hitmag_layout_meta', true );
 		if ( empty( $page_specific_layout ) || $page_specific_layout == 'th-default-layout' ) {
 			$classes[] = esc_attr( get_option( 'page_sidebar_align', 'th-right-sidebar' ) );
@@ -119,14 +121,15 @@ function hitmag_get_layout() {
 			$layout = $post_specific_layout;
 		}
 	}
-
-	if ( is_page() ) {
+	if( is_page_template( 'template-magazine.php' ) ) {
+		$layout = 'th-right-sidebar';
+	} elseif ( is_page() ) {
 		$page_specific_layout = get_post_meta( $post->ID, '_hitmag_layout_meta', true );
 		if ( empty( $page_specific_layout ) || $page_specific_layout == 'th-default-layout' ) {
 			$layout = get_option( 'page_sidebar_align', 'th-right-sidebar' );
 		} else {
 			$layout = $page_specific_layout;
-		}		
+		}	
 	}
 
 	return $layout;

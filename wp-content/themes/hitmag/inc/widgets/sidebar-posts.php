@@ -50,7 +50,7 @@ class HitMag_Sidebar_Posts extends WP_Widget {
 		</p>
 		<p>
 			<input type="checkbox" <?php checked( $instance['sticky_posts'], true ) ?> class="checkbox" id="<?php echo $this->get_field_id('sticky_posts'); ?>" name="<?php echo $this->get_field_name('sticky_posts'); ?>" />
-			<label for="<?php echo $this->get_field_id('sticky_posts'); ?>"><?php esc_html_e( 'Hide sticky posts.', 'hitmag' ); ?></label>
+			<label for="<?php echo $this->get_field_id('sticky_posts'); ?>"><?php esc_html_e( 'Ignore sticky posts.', 'hitmag' ); ?></label>
 		</p>
 
 	<?php
@@ -125,7 +125,7 @@ class HitMag_Sidebar_Posts extends WP_Widget {
 							</div>
 						<?php } ?>
 						<div class="hms-details">
-							<?php the_title( sprintf( '<h3 class="hms-title"><a href="%s" rel="bookmark">', esc_url_raw( get_permalink() ) ), '</a></h3>' ); ?>
+							<?php the_title( sprintf( '<h3 class="hms-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 							<p class="hms-meta"><?php echo hitmag_posted_datetime(); ?></p>
 						</div>
 					</div><!-- .hms-post -->
