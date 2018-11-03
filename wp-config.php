@@ -21,13 +21,13 @@ define('WP_AUTO_UPDATE_CORE', false);// This setting was defined by WordPress To
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp_3jw53' );
+define( 'DB_NAME', 'trumpdev' );
 
 /** MySQL database username */
-define( 'DB_USER', 'wp_18c4q' );
+define( 'DB_USER', 'trumpdev' );
 
 /** MySQL database password */
-define('DB_PASSWORD', 'Z7IVr45ji$');
+define('DB_PASSWORD', 'J#9q5v4u');
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost:3306' );
