@@ -2,18 +2,16 @@
 
 Contributors: Pubudu Malalasekara
 Tags: grid-layout,right-sidebar,two-columns,custom-logo,custom-background,custom-menu,featured-images,footer-widgets,full-width-template,theme-options,threaded-comments,translation-ready,news,blog
-Requires at least: 4.0
-Tested up to: 4.9.8
-Stable tag: 1.2.0
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-HitMag WordPress Theme, Copyright 2017 Pubudu Malalasekara
-HitMag is distributed under the terms of the GNU GPL
+Requires at least: 4.0
+Tested up to: 4.8
+Stable tag: 1.0.5
+License: GNU General Public License v2 or later
+License URI: LICENSE
 
 == Description ==
 
-HitMag is a stylish and powerful theme crafted for magazines, newspapers or personal blogs. HitMag comes with a handful of options to customize your site the way you want. Free version has included a magazine homepage layout, 4 different style blog listing layouts and main color options. Not only that, it comes with so many handful of features like author details box, Related posts after articles and control post metadata. All those features and options ensures that HitMag is not just another free WordPress theme but a powerful theme that fulfills all of the basic needs. See all the theme information at https://themezhut.com/themes/hitmag/
+HitMag is a stylish and powerful theme crafted for magazines, newspapers or personal blogs. HitMag comes with a handful of options to customize your site the way you want. Free version has included a magazine homepage layout, 4 different style blog listing layouts and main color options. Not only that it comes with so many handful of features like social sharing, author details box, Related posts after articles and control post metadata. All those features and options ensures that HitMag is not just another free WordPress theme but a powerful theme that fulfills all of the basic needs.
 
 == Installation ==
 
@@ -56,7 +54,7 @@ Font Awesome 4 Menus
 = 1.0.3 - July 5 2017 =
 * Fixed few escaping issues.
 
-= 1.0.4 - July 25 2017 =
+= 1.0.4 -July 25 2017 =
 * Fixed mobile menu not disappearing issue.
 * Hitmag Popular posts, tags, comments restyled for footer.
 * All the widgets are now working on any sidebar except header advertisement area.
@@ -67,76 +65,9 @@ Font Awesome 4 Menus
 * Posts widgets styled for footer.
 * Edited translation file.
 
-= 1.0.5 - July 25 2017 =
+= 1.0.4 -July 25 2017 =
 * Used escaping functions for translation.
 * Removed social sharing function.
-
-= 1.0.6 - August 15 2017 =
-* Used get_templated_directory instead of dirname in functions.php.
-* Fixed anonymous function issue.
-* Fixed some escaping issues.
-* Removed wp_reset_query() function on related-posts.php.
-* Fixed translation issues.
-
-= 1.0.7 - August 18 2017 =
-* Declared RTL support.
-
-= 1.0.8 - August 23 2017 =
-* Fixed an issue in header image.
-* Changed the youtube icon in social media menu.
-* Changed max-height in header sidebar.
-* Fixed a issue in custom color option.
-
-= 1.0.9 - September 09 2017 =
-* Fixed few issues in RTL styles.
-* Fixed a plugin conflict with slider.
-* Fixed IE 11 menu dropdown icon issue.
-* Added styles to Category Widget and Archive Widget.
-
-= 1.1.0 - November 04 2017 =
-* Fixed white space issue on header.
-
-= 1.1.1 - November 21 2017 =
-* Fixed the theme primary color control issue with WordPress 4.9.
-* Updated the translation file.
-
-= 1.1.2 - January 08 2018 =
-* Added yelp icon.
-* Fixed some styling issues in blog posts listings.
-
-= 1.1.3 - February 27 2018 =
-* Added WooCommerce Support.
-
-= 1.1.4 - March 5 2018 =
-* Added search box to the mobile navigation menu.
-* Added stylings for default widgets.
-* Changed the header sidebar height.
-* Added some stylings to WooCommerce.
-
-= 1.1.5 - March 19 2018 =
-* Changed few stylings.
-
-= 1.1.6 - April 2 2018 =
-* Updated kirki library.
-* Fixed some issues in mobile navigation.
-
-= 1.1.7 - April 20 2018 =
-* Changed kirki version due to a compatiblity issue on versions < 4.9
-
-= 1.1.8 - June 04 2018 =
-* Added two page templates to be used on page builders.
-* Fixed "Read More" button's active state color issue.
-* Fixed footer widget links hover state color issue.
-
-= 1.1.9 - July 30 2018 =
-* Renamed "sticky posts" widget controls.
-* Fixed layout issue when there is no posts on "HitMag_Single_Category_Posts" widget. 
-
-= 1.2.0 - Oct 08 2018 =
-* Updated Popular Posts, Comments, Tags widget to display only approved comments.
-* Used (document).ready() method instead of (window).load() method for slider.
-* Used localized date method instead of date on top bar. 
-* Fixed the layout issue that comes when adding elements inside posts.
 
 == Credits ==
 
@@ -163,9 +94,6 @@ Font Awesome 4 Menus
 
 * Ubuntu Font by Dalton Maag https://fonts.google.com/specimen/Ubuntu
   License - http://font.ubuntu.com/ufl/ubuntu-font-licence-1.0.txt
-
-* TRT Customizer Pro by Justin Tadlock https://github.com/justintadlock/trt-customizer-pro
-  License - https://github.com/justintadlock/trt-customizer-pro/blob/master/license.md
 
 * All Images shown in the screenshot and bundled with themes are from pixabay.
 

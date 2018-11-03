@@ -81,12 +81,6 @@ function hitmag_setup() {
 		'default-image' => '',
 	) ) );
 
-	// Declare WooCommerce support.
-	add_theme_support( 'woocommerce' );	
-	add_theme_support( 'wc-product-gallery-zoom' );
-	add_theme_support( 'wc-product-gallery-lightbox' );
-	add_theme_support( 'wc-product-gallery-slider' );
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -349,13 +343,10 @@ function hitmag_the_custom_logo() {
  * Embed kirki plugin.
  */
 if ( ! class_exists( 'Kirki' ) ) {
-	include_once( get_template_directory() . '/inc/kirki/kirki.php' );
+	include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
 }
 require get_template_directory() . '/inc/customizer/kirki-config.php';
 require get_template_directory() . '/inc/customizer/styles.php';
-
-require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/custom-controls/class-upsell-customize.php' );
-
 /**
  * Customizer additions.
  */

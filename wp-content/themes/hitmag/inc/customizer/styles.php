@@ -40,10 +40,6 @@ function hitmag_custom_styles() {
                 background-color: '. $primary_color .';
             }
 
-            #main-nav-button:hover {
-                background-color: '. $primary_color .';
-            }
-
             .post-navigation .post-title:hover {
                 color: '. $primary_color .';
             }
@@ -73,7 +69,6 @@ function hitmag_custom_styles() {
                 background: '. $primary_color .';
             }
 
-            .elementor-widget-container h5,
             .widget-title {
                 border-bottom: 2px solid '. $primary_color .';
             }
@@ -86,7 +81,7 @@ function hitmag_custom_styles() {
                 color: '. $primary_color .';
             }
 
-            .footer-widget-area .widget a:hover {
+            .footer-widget-area a:hover {
                 color: '. $primary_color .';
             }
 
@@ -210,35 +205,8 @@ function hitmag_custom_styles() {
                 color: '. $primary_color .';
             }
 
-            blockquote {
-                border-left: 3px solid '. $primary_color .';
-            }
-
             .comment-reply-title small a:before {
                 color: '. $primary_color .';
-            }
-            
-            .woocommerce ul.products li.product h3:hover,
-            .woocommerce-widget-area ul li a:hover,
-            .woocommerce-loop-product__title:hover {
-                color: '. $primary_color .';
-            }
-
-            .woocommerce-product-search input[type="submit"],
-            .woocommerce #respond input#submit, 
-            .woocommerce a.button, 
-            .woocommerce button.button, 
-            .woocommerce input.button,
-            .woocommerce nav.woocommerce-pagination ul li a:focus,
-            .woocommerce nav.woocommerce-pagination ul li a:hover,
-            .woocommerce nav.woocommerce-pagination ul li span.current,
-            .woocommerce span.onsale,
-            .woocommerce-widget-area .widget-title,
-            .woocommerce #respond input#submit.alt,
-            .woocommerce a.button.alt,
-            .woocommerce button.button.alt,
-            .woocommerce input.button.alt {
-                background: '. $primary_color .';
             }';
 
 	}

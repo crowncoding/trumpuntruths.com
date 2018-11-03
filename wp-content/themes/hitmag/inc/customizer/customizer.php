@@ -18,7 +18,7 @@ function hitmag_sections_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_section( 'header_image' )->panel 		= 'hitmag-header-options';
-	$wp_customize->get_section( 'header_image' )->priority 		= 3;
+	$wp_customize->get_section( 'header_image' )->priority 		= 2;
 
 	/**
 	 * Add panels
@@ -45,16 +45,10 @@ function hitmag_sections_register( $wp_customize ) {
 		'priority'    	=> 1
 	) );	 
 
-	$wp_customize->add_section( 'header_settings', array(
-		'title'       	=> esc_html__( 'Header Settings', 'hitmag' ),
-		'panel'			=> 'hitmag-header-options',
-		'priority'    	=> 2
-	) );	 	
-
 	$wp_customize->add_section( 'header_image_options', array(
 		'title'       	=> esc_html__( 'Header Image Options', 'hitmag' ),
 		'panel'			=> 'hitmag-header-options',
-		'priority'    	=> 4
+		'priority'    	=> 3
 	) );	
 
 	// Slider Settings
@@ -82,35 +76,6 @@ function hitmag_sections_register( $wp_customize ) {
 		'description' 	=> esc_html__( 'These opitons affect only to pages.', 'hitmag' ),
 		'priority'    	=> 32
 	) );
-	// Theme Info
-	$wp_customize->add_section( 'hitmag_theme_info', array(
-		'title'       	=> esc_html__( 'Theme Info', 'hitmag' ),
-		//'priority'    	=> 100
-	) );	
-
-
-	/* Add primary color setting here until kirki compatible with WordPress 4.9 */
-	$wp_customize->add_setting(
-		'hitmag_primary_color',
-		array(
-			'default'			=> '#E74C3C',
-			'type'				=> 'theme_mod',
-			'capability'		=> 'edit_theme_options',
-			'sanitize_callback'	=> 'hitmag_sanitize_hex_color'
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control( 
-			$wp_customize,
-			'hitmag_primary_color',
-			array(
-				'settings'		=> 'hitmag_primary_color',
-				'section'		=> 'colors',
-				'label'			=> esc_html__( 'Theme Primary Color', 'hitmag' ),
-			)
-		)
-	);
 
 }
 add_action( 'customize_register', 'hitmag_sections_register' );
@@ -155,15 +120,6 @@ function hitmag_kirki_fields( $fields ) {
 			'off' 	=> esc_attr__( 'Hide', 'hitmag' ),
 		),
 	);
-
-	$fields[] = array(
-		'type'        		=> 'checkbox',
-		'settings'    		=> 'show_nav_search',
-		'label'       		=> esc_html__( 'Show search icon on Main Navigation.', 'hitmag' ),
-		'section'     		=> 'header_settings',
-		'default'     		=> '1',
-		'priority'    		=> 1,
-	);		
 
 	$fields[] = array(
 		'type'        		=> 'toggle',
@@ -533,20 +489,16 @@ function hitmag_kirki_fields( $fields ) {
 	);
 
 	$fields[] = array(
-		'type'        => 'custom',
-		'settings'    => 'theme_documentation',
-		'label'       => __( 'Theme Setup Guide', 'hitmag' ),
-		'section'     => 'hitmag_theme_info',
-		'default'     => '<a href="https://themezhut.com/hitmag-wordpress-theme-documentation/" target="_blank">' . esc_html__( 'Read the documentation', 'hitmag' ) . '</a>',
+		'type'        => 'color',
+		'settings'    => 'hitmag_primary_color',
+		'label'       => esc_html__( 'Theme Primary Color', 'hitmag' ),
+		'section'     => 'colors',
+		'default'     => '#E74C3C',
+		'priority'    => 10,
+		'choices'     => array(
+			'alpha' => true,
+		)
 	);
-
-	$fields[] = array(
-		'type'        => 'custom',
-		'settings'    => 'theme_info',
-		'label'       => __( 'Theme Details', 'hitmag' ),
-		'section'     => 'hitmag_theme_info',
-		'default'     => '<a href="https://themezhut.com/themes/hitmag/" target="_blank">' . esc_html__( 'Theme Details', 'hitmag' ) . '</a>',
-	);	
 
 	return $fields;
 }
@@ -582,13 +534,6 @@ function hitmag_inactive_magazine() {
 	}
 }
 
-function hitmag_sanitize_hex_color( $hex_color, $setting ) {
-	// Sanitize $input as a hex value without the hash prefix.
-	$hex_color = sanitize_hex_color( $hex_color );
-	
-	// If $input is a valid hex value, return it; otherwise, return the default.
-	return ( ! is_null( $hex_color ) ? $hex_color : $setting->default );
-}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
