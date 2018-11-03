@@ -51,9 +51,12 @@
 					?>
 				</div>			
 				<div class="site-info-designer">
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hitmag' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'hitmag' ), 'WordPress' ); ?></a>
-					<span class="sep"> | </span>
-					<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'hitmag' ), 'HitMag', '<a href="https://themezhut.com/themes/hitmag/" rel="designer">ThemezHut</a>' ); ?>
+					<?php
+						printf( esc_html__( 'Powered by %1$s and %2$s.', 'hitmag' ),
+							'<a href="https://wordpress.org" target="_blank" title="WordPress">WordPress</a>',
+							'<a href="https://themezhut.com/themes/hitmag/" target="_blank" title="HitMag WordPress Theme">HitMag</a>'
+						); 
+					?>
 				</div>
 			</div><!-- .hm-container -->
 		</div><!-- .site-info -->

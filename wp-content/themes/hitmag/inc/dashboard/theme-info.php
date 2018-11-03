@@ -88,6 +88,10 @@ function hitmag_admin_welcome_page() {
         <p><?php esc_html_e( 'Need to learn all about HitMag? Read the theme documentation carefully.', 'hitmag' ) ?></p>
         <a class="button" target="_blank" href="<?php echo esc_url( 'https://themezhut.com/hitmag-wordpress-theme-documentation/' ); ?>"><?php esc_html_e( 'Read the documentation.','hitmag' ); ?></a>
 
+        <h3><?php esc_html_e( 'Theme Info', 'hitmag' ); ?></h3>
+        <p><?php esc_html_e( 'Know all the details about HitMag theme.', 'hitmag' ) ?></p>
+        <a class="button" target="_blank" href="<?php echo esc_url( 'https://themezhut.com/themes/hitmag/' ); ?>"><?php esc_html_e( 'Theme Details.','hitmag' ); ?></a>
+
         <h3><?php esc_html_e( 'Theme Demo', 'hitmag' ); ?></h3>
         <p><?php esc_html_e( 'See the theme preview of free version.', 'hitmag' ) ?></p>
         <a class="button" target="_blank" href="<?php echo esc_url( 'https://themezhut.com/demo/hitmag/' ); ?>"><?php esc_html_e( 'Theme Preview','hitmag' ); ?></a>    
