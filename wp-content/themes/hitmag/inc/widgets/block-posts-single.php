@@ -154,11 +154,10 @@ class HitMag_Single_Category_Posts extends WP_Widget {
 				
 				$hmp_count++; 
 			endwhile;
-			wp_reset_postdata(); ?>
-			</div><!-- .hms-posts -->
-			
-			<?php endif; ?>
+			wp_reset_postdata();
+			endif; ?>
 		
+				</div><!-- .hms-posts -->
 			</div><!-- .hitmag-one-category -->
 
 	<?php

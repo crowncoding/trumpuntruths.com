@@ -12,6 +12,15 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128636863-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-128636863-1');
+</script>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -30,7 +39,9 @@
 
 			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
 				<div class="hm-topnavbutton">
-					<a href="#" class="navbutton" id="top-nav-button"><?php esc_html_e( 'Top Menu', 'hitmag' ); ?></a>
+					<div class="hm-nwrap">
+						<a href="#" class="navbutton" id="top-nav-button"><?php esc_html_e( 'Top Menu', 'hitmag' ); ?></a>
+					</div>	
 				</div>
 				<div class="responsive-topnav"></div>					
 			<?php endif; ?>
@@ -39,7 +50,7 @@
 				<div class="hm-container">
 					
 					<?php if ( true == get_theme_mod( 'show_topbar_date', 'true' ) ) : ?>
-						<div class="hm-date"><?php echo date( get_option( 'date_format' ) ); ?></div>
+						<div class="hm-date"><?php echo date_i18n( get_option( 'date_format' ) ); ?></div>
 					<?php endif; ?>
 
 					<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
@@ -98,19 +109,21 @@
 		<div class="hm-nav-container">
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="hm-container">
-				<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-
-				<?php if ( get_theme_mod( 'show_search_box', true ) ) : ?>
-					<div class="hm-search-button-icon"></div>
-					<div class="hm-search-box-container">
-						<div class="hm-search-box">
-							<?php get_search_form(); ?>
-						</div><!-- th-search-box -->
-					</div><!-- .th-search-box-container -->
-				<?php endif; ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+					
+					<?php if ( true == get_theme_mod( 'show_nav_search', true ) ) : ?>
+						<div class="hm-search-button-icon"></div>
+						<div class="hm-search-box-container">
+							<div class="hm-search-box">
+								<?php get_search_form(); ?>
+							</div><!-- th-search-box -->
+						</div><!-- .th-search-box-container -->
+					<?php endif; ?>
 				</div><!-- .hm-container -->
 			</nav><!-- #site-navigation -->
-			<a href="#" class="navbutton" id="main-nav-button"><?php esc_html_e( 'Main Menu', 'hitmag' ); ?></a>
+			<div class="hm-nwrap">
+				<a href="#" class="navbutton" id="main-nav-button"><?php esc_html_e( 'Main Menu', 'hitmag' ); ?></a>
+			</div>
 			<div class="responsive-mainnav"></div>
 		</div><!-- .hm-nav-container -->
 

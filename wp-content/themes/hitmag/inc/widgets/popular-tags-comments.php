@@ -116,8 +116,7 @@ class HitMag_Tabbed_Widget extends WP_Widget {
 
 					$avatar_size = 50;
 					$args = array(
-						'number'    => $noc,
-						'status'	=> 'approve'
+						'number'       => $noc,
 					);
 					$comments_query = new WP_Comment_Query;
 					$comments = $comments_query->query( $args );	
@@ -166,6 +165,11 @@ class HitMag_Tabbed_Widget extends WP_Widget {
 		<?php echo $after_widget; ?>
 
 		<?php wp_enqueue_script( 'jquery-ui-tabs' ); ?>
+		<script type='text/javascript'>
+			jQuery(document).ready( function() {
+				jQuery( ".hm-tabs-wdt" ).tabs();
+			});
+		</script>
 
 <?php
 
@@ -174,7 +178,7 @@ class HitMag_Tabbed_Widget extends WP_Widget {
 }
 
 //Registster hitmag tabbed widget.
-function hitmag_register_tabbed_widget() {
+function register_hitmag_tabbed_widget() {
     register_widget( 'HitMag_Tabbed_Widget' );
 }
-add_action( 'widgets_init', 'hitmag_register_tabbed_widget' ); 
+add_action( 'widgets_init', 'register_hitmag_tabbed_widget' ); 

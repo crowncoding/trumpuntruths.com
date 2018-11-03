@@ -32,8 +32,7 @@ class HitMag_Customize_Category_Control extends WP_Customize_Control {
 }
 
 // Register our custom control with Kirki
-add_filter( 'kirki/control_types', 'hitmag_register_kirki_category_control' ); 
-function hitmag_register_kirki_category_control( $controls ) {
+add_filter( 'kirki/control_types', function( $controls ) {
     $controls['hitmag-category-dropdown'] = 'HitMag_Customize_Category_Control';
     return $controls;
-}
+} );
