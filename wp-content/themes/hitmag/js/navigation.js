@@ -107,24 +107,34 @@
 
 jQuery(document).ready(function(){
 
-	jQuery('#site-navigation ul:first-child').clone().appendTo('.responsive-mainnav');
+	var mobMainNav = jQuery('.responsive-mainnav'),
+		mainNavUl = mobMainNav.find('ul#primary-menu'),
+		mNavWrapper = jQuery('<div class="hm-nwrap"></div>');
+
+	mNavWrapper.appendTo(mobMainNav);
+	jQuery('#site-navigation ul:first-child').clone().appendTo(mNavWrapper);
 
 	jQuery('#main-nav-button').click(function(event){
 		event.preventDefault();
-		jQuery('.responsive-mainnav').slideToggle();
-		jQuery('ul.sub-menu').show();
+		mobMainNav.slideToggle(0);
+		mainNavUl.show();
 	});
 	
 });
 
 jQuery(document).ready(function(){
 
-	jQuery('#top-navigation ul:first-child').clone().appendTo('.responsive-topnav');
+	var mobTopNav = jQuery('.responsive-topnav'),
+	topNavUl = mobTopNav.find('ul#top-menu'),
+	tNavWrapper = jQuery('<div class="hm-nwrap"></div>');
+
+	tNavWrapper.appendTo(mobTopNav);
+	jQuery('#top-navigation ul:first-child').clone().appendTo(tNavWrapper);
 
 	jQuery('#top-nav-button').click(function(event){
 		event.preventDefault();
-		jQuery('.responsive-topnav').slideToggle();
-		jQuery('ul.sub-menu').show();
+		mobTopNav.slideToggle(0);
+		topNavUl.show();
 	});
 	
 });
