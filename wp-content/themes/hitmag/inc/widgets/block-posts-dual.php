@@ -42,7 +42,7 @@ class HitMag_Dual_Category_Posts extends WP_Widget {
 
 	?>
 		<!-- Form for category 1 -->
-		<h3> First Set of Posts </h3>
+		<h3><?php esc_html_e( 'First Set of Posts', 'hitmag' ); ?></h3>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title1' ); ?>"><?php esc_html_e( 'Title:', 'hitmag' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title1' ); ?>" name="<?php echo $this->get_field_name( 'title1' ); ?>" value="<?php echo esc_attr($instance['title1']); ?>"/>
@@ -57,7 +57,7 @@ class HitMag_Dual_Category_Posts extends WP_Widget {
 		</p>
 		<p>
 			<input type="checkbox" <?php checked( $instance['sticky_posts1'], true ) ?> class="checkbox" id="<?php echo $this->get_field_id('sticky_posts1'); ?>" name="<?php echo $this->get_field_name('sticky_posts1'); ?>" />
-			<label for="<?php echo $this->get_field_id('sticky_posts1'); ?>"><?php esc_html_e( 'Hide sticky posts.', 'hitmag' ); ?></label>
+			<label for="<?php echo $this->get_field_id('sticky_posts1'); ?>"><?php esc_html_e( 'Ignore sticky posts.', 'hitmag' ); ?></label>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'viewall_text1' ); ?>"><?php esc_html_e( 'View All Text:', 'hitmag' ); ?></label>
@@ -65,7 +65,7 @@ class HitMag_Dual_Category_Posts extends WP_Widget {
 		</p>
 		<hr />
 		<!-- Form for category 2 -->
-		<h3> Second Set of Posts </h3>
+		<h3><?php esc_html_e( 'Second Set of Posts', 'hitmag' ); ?></h3>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title2' ); ?>"><?php esc_html_e( 'Title:', 'hitmag' ); ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title2' ); ?>" name="<?php echo $this->get_field_name( 'title2' ); ?>" value="<?php echo esc_attr($instance['title2']); ?>"/>
@@ -80,7 +80,7 @@ class HitMag_Dual_Category_Posts extends WP_Widget {
 		</p>
 		<p>
 			<input type="checkbox" <?php checked( $instance['sticky_posts2'], true ) ?> class="checkbox" id="<?php echo $this->get_field_id('sticky_posts2'); ?>" name="<?php echo $this->get_field_name('sticky_posts2'); ?>" />
-			<label for="<?php echo $this->get_field_id('sticky_posts2'); ?>"><?php esc_html_e( 'Hide sticky posts.', 'hitmag' ); ?></label>
+			<label for="<?php echo $this->get_field_id('sticky_posts2'); ?>"><?php esc_html_e( 'Ignore sticky posts.', 'hitmag' ); ?></label>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'viewall_text2' ); ?>"><?php esc_html_e( 'View All Text:', 'hitmag' ); ?></label>
