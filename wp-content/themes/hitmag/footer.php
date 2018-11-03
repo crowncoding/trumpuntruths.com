@@ -51,12 +51,7 @@
 					?>
 				</div>			
 				<div class="site-info-designer">
-					<?php
-						printf( esc_html__( 'Powered by %1$s and %2$s.', 'hitmag' ),
-							'<a href="https://wordpress.org" target="_blank" title="WordPress">WordPress</a>',
-							'<a href="https://themezhut.com/themes/hitmag/" target="_blank" title="HitMag WordPress Theme">HitMag</a>'
-						); 
-					?>
+
 				</div>
 			</div><!-- .hm-container -->
 		</div><!-- .site-info -->
